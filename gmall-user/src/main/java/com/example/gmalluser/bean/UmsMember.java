@@ -1,6 +1,9 @@
 package com.example.gmalluser.bean;
 
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -8,6 +11,8 @@ import java.util.Date;
  * @create 2020-06-07 22:52
  */
 public class UmsMember {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String memberLevelId;
     private String username;
